@@ -12,3 +12,4 @@ D:\Moveto\Desktop\Code\Csharp workspace\ToolBoxInSunway\AlgorithmNet\obj\Debug\n
 D:\Moveto\Desktop\Code\Csharp workspace\ToolBoxInSunway\AlgorithmNet\obj\Debug\net8.0\AlgorithmNet.pdb
 D:\Moveto\Desktop\Code\Csharp workspace\ToolBoxInSunway\AlgorithmNet\obj\Debug\net8.0\AlgorithmNet.genruntimeconfig.cache
 D:\Moveto\Desktop\Code\Csharp workspace\ToolBoxInSunway\AlgorithmNet\obj\Debug\net8.0\ref\AlgorithmNet.dll
+D:\Moveto\Desktop\Code\Csharp workspace\ToolBoxInSunway\AlgorithmNet\obj\Debug\net8.0\AlgorithmNet.sourcelink.json

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AlgorithmNet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+134a04108c482a72ad1b07f87cdc292e8f04c764")]
 [assembly: System.Reflection.AssemblyProductAttribute("AlgorithmNet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AlgorithmNet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

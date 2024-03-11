@@ -75,7 +75,12 @@ namespace AlgorithmNet
         {
             LinkedList<int> inputList = new LinkedList<int>((new int[] { 1, 2, 4, '\0', '\0', 5, '\0', '\0', 3, '\0', 6 }).ToList());
             TreeNode treeNode = BinaryTreeMethod.createBinaryTree(inputList);
+            Console.WriteLine("======1======");
             ATestByTree.preOrderTraveralWithStack(treeNode);
+            Console.WriteLine("======2======");
+            ATestByTree.inOrderTraveralWithStack(treeNode);
+            Console.WriteLine("======3======");
+            ATestByTree.postOrderTraveralWithStatck(treeNode);
         }
     }
 }

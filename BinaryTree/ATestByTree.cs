@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace AlgorithmNet.BinaryTree
 {
@@ -96,15 +97,14 @@ namespace AlgorithmNet.BinaryTree
             {
                 while (treeNode != null)
                 {
+                    Console.WriteLine("Stack<TreeNode> --> " + treeNode.data);
                     stack.Push(treeNode);
-                    Console.WriteLine("Stack<TreeNode> <-- " + treeNode.data);
                     treeNode = treeNode.leftChild;
                 }
 
                 if (stack.TryPeek(out _))
                 {
                     treeNode = stack.Pop();
-                    Console.WriteLine("Stack<TreeNode> --> " + treeNode.data);
                     treeNode = treeNode.rightChild;
                 }
             }
@@ -123,13 +123,13 @@ namespace AlgorithmNet.BinaryTree
             {
                 while (treeNode != null)
                 {
-                    treeNode = treeNode.leftChild;
                     stack.Push(treeNode);
-                    Console.WriteLine("Stack <-- " + treeNode.data);
+                    treeNode = treeNode.leftChild;
                 }
 
                 if (stack.TryPeek(out _))
                 {
+                    // Console.WriteLine("Stack <-- " + treeNode.data);
                     treeNode = stack.Pop();
                     Console.WriteLine("Stack --> " + treeNode.data);
                     treeNode = treeNode.rightChild;
@@ -146,20 +146,30 @@ namespace AlgorithmNet.BinaryTree
         {
             Stack<TreeNode> stack = new Stack<TreeNode>();
             TreeNode treeNode = root;
+            TreeNode lastVisited = null;
             while (treeNode != null || stack.TryPeek(out _))
             {
                 while (treeNode != null)
                 {
-                    treeNode = treeNode.leftChild;
                     stack.Push(treeNode);
-                    Console.WriteLine("Stack <-- " + treeNode.data);
+                    treeNode = treeNode.leftChild;
+                    // Console.WriteLine("Stack <-- " + treeNode.data);
                 }
 
                 if (stack.TryPeek(out _))
                 {
-                    treeNode = stack.Pop();
-                    Console.WriteLine("Stack --> " + treeNode.data);
-                    treeNode = treeNode.rightChild;
+                    treeNode = stack.Peek();
+                    if (treeNode.rightChild == null || treeNode.rightChild == lastVisited)
+                    {
+                        Console.WriteLine("Stack --> " + treeNode.data);
+                        stack.Pop();
+                        lastVisited = treeNode;
+                        treeNode = null;
+                    }
+                    else
+                    {
+                        treeNode = treeNode.rightChild;
+                    }
                 }
             }
         }
