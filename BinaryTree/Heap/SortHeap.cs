@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlgorithmNet.Method
+namespace AlgorithmNet.BinaryTree.Heap
 {
     internal class SortHeap
     {
@@ -19,6 +19,7 @@ namespace AlgorithmNet.Method
         {
             // temp保存父节点值，用于最后的赋值
             int temp = array[parentIndex];
+            // 左孩子
             int childIndex = 2 * parentIndex + 1;
             while (childIndex < length)
             {

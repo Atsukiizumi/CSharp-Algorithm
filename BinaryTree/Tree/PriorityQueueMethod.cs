@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlgorithmNet.BinaryTree
+namespace AlgorithmNet.BinaryTree.Tree
 {
     internal class PriorityQueueMethod
     {
@@ -101,7 +101,7 @@ namespace AlgorithmNet.BinaryTree
             int newSize = size * 2;
             int[] newArray = new int[newSize];
             array.CopyTo(newArray, 0);
-            this.array = newArray;
+            array = newArray;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using AlgorithmNet.BinaryTree;
+﻿using AlgorithmNet.BinaryTree.Tree;
 using AlgorithmNet.Method;
 using System.Xml.Linq;
 
@@ -11,7 +11,8 @@ namespace AlgorithmNet
             // StartTree();
             // StartQuickSort();
             // Console.WriteLine(SimpleRecursion(10));
-            StackTree();
+            // StackTree();
+            StartLine();
         }
 
         /// <summary>
@@ -81,6 +82,16 @@ namespace AlgorithmNet
             ATestByTree.inOrderTraveralWithStack(treeNode);
             Console.WriteLine("======3======");
             ATestByTree.postOrderTraveralWithStatck(treeNode);
+        }
+
+        private static void StartLine()
+        {
+            int[] array = new int[] { 95, 94, 91, 98, 99, 90, 99, 93, 91, 97, 95, 96, 94, 92, 95 };
+            int[] sortedArray = SortLine.countSort(array);
+            foreach (var sort in sortedArray)
+            {
+                Console.WriteLine(sort);
+            }
         }
     }
 }
