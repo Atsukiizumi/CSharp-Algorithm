@@ -86,9 +86,17 @@ namespace AlgorithmNet
 
         private static void StartLine()
         {
+            Console.WriteLine("=========Count Sort==========");
             int[] array = new int[] { 95, 94, 91, 98, 99, 90, 99, 93, 91, 97, 95, 96, 94, 92, 95 };
             int[] sortedArray = SortLine.countSort(array);
             foreach (var sort in sortedArray)
+            {
+                Console.WriteLine(sort);
+            }
+            Console.WriteLine("===========Bucket Sort============");
+            double[] darray = new double[] { 4.12, 6.421, 0.0023, 3.0, 2.123, 8.122, 4.12, 10.09 };
+            double[] sorteddArray = SortLine.bucketSort(darray);
+            foreach (var sort in sorteddArray)
             {
                 Console.WriteLine(sort);
             }
